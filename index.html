@@ -1,14 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediaQuery</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundWave Emporium</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./assets/imgs/music.png" type="image/x-icon">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/76066ff5d0.js" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
 
-
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-<body>
-    
-</body>
-</html>
+      <nav>
+        <header>
+          <img id="Soundwave" src="./assets/imgs/BIGmusic.png" alt="IconoPagina">
+          <h1 id="nombre">SoundWave Emporium</h1>
+        </header>
+        <div>
+          <label for="Marcas">Ordenar por:</label>
+          <select name="Marcas" id="Marcas">
+            <option value="Todo">Todo</option>
+            <option value="HP">HP</option>
+            <option value="Dell">Dell</option>
+            <option value="JBL">JBL</option>
+            <option value="RGB">RGB</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Soundcore">Soundcore</option>
+            <option value="Headphones">Headphones</option>
+          </select>
+        </div>
+      </nav>
+      <menu>
+      <ul id="menu">
+        <h3 id="categorias">Categorias</h3>
+        <hr>
+        <a href=""><li>Todo <span>(105)</span></li></a>
+        <a href=""><li>HP <span>(15)</span></li></a>
+        <a href=""><li>Dell <span>(10)</span></li></a>
+        <a href=""><li>JBL <span>(20)</span></li></a>
+        <a href=""><li>RGB <span>(12)</span></li></a>
+        <a href=""><li>Samsung <span>(8)</span></li></a>
+        <a href=""><li>Soundcore <span>(22)</span></li></a>
+        <a href=""><li>Headphones <span>(6)</span></li></a>
+    </ul>
+      </menu>
+      <main>
+        <figure class="card">
+          <div class="img">
+            <img src="./assets/imgs/P-DEDIGE.webp" alt="Parlante-DEIGE" />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">DEIGE</h1>
+            <h3 class="descripcion">Altavoces 3D con cable subwoofer</h3>
+            <p class="ID">ID 265153</p>
+              <h2 class="precio">$43.513</h2>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+            <img src="./assets/imgs/P-Dell.webp" alt="Parlante-Dell" />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">Parlante DELL</h1>
+            <h3 class="descripcion">multimedia Reacondicionado</h3>
+            <p class="ID">ID 15877</p>
+            <h2 class="precio">$9.990</h2>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+          <img src="./assets/imgs/P-Flip-6-Negro.jpg" alt="Parlante-Flip6" />
+        </div>
+        <figcaption>
+          <h1 class="Parlante">JBL FLip 6</h1>
+          <h3 class="descripcion">Negro</h3>
+          <p class="ID">ID 700459</p>
+          <h2 class="precio">$109.990</h2>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="img">
+          <img
+          src="./assets/imgs/P-Genius-Hf180.webp"
+          alt="Parlante-Genius-Hf180"
+          />
+        </div>
+        <figcaption>
+          <h1 class="Parlante">Parlantes Genius Sp</h1>
+          <h3 class="descripcion">Hf180 6w Wood Color Madera</h3>
+          <p class="ID">ID 23540</p>
+          <h2 class="precio">$9.302</h2>
+          
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="img">
+          <img
+          src="./assets/imgs/P-HP-RGB-DHE-6000.avif"
+          alt="Parlante-HP-DHE6000"
+          />
+        </div>
+        <figcaption>
+          <h1 class="Parlante">HP RGB DHE-6000</h1>
+          <h3 class="descripcion">Jack 3,5mm + USB</h3>
+          <p class="ID">ID 1126464</p>
+          <h2 class="precio">$7.870</h2>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="img">
+          <img src="./assets/imgs/P-Rockwood.jpg" alt="Parlante-Rockwood" />
+        </div>
+        <figcaption>
+          <h1 class="Parlante">Parlante Rockwood</h1>
+          <h3 class="descripcion">Blik</h3>
+          <p class="ID">ID 1PA05167</p>
+          <h2 class="precio">$16.990</h2>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="img">
+          <img src="./assets/imgs/P-HP-DHS-2101.jpg" alt="Parlante-DHS2101" />
+        </div>
+        <figcaption>
+          <h1 class="Parlante">HP® Parlantes PC</h1>
+          <h3 class="descripcion">Parlante Pc DHS-2101 Gamer</h3>
+          <p class="ID">ID 48336</p>
+          <h2 class="precio">$14.990</h2>
+        </figcaption>
+      </figure>
+    </main>
+    <footer>
+      <H1>DATOS DE LA TIENDA</H1>
+    </footer>
+  </div>
+  </body>
+  </html>
+  
