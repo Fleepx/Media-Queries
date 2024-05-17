@@ -18,12 +18,11 @@
 header {
     display: grid;
     grid-area: header;
-    height: 8.5rem;
+    height: 8rem;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    background: linear-gradient(to bottom, var(--fondo-violeta), #ffffff);
+    background: linear-gradient(to bottom, var(--fondo-violeta), rgba(255, 255, 255, 0.9));
 }
 .tienda {
     display: flex;
@@ -98,10 +97,32 @@ main {
     display: grid;    
     width: 100%;
     overflow-y: auto;
-    height: calc(100vh - 13.5rem);
-    margin-top: 8.5rem;
+    height: calc(100vh - 13rem);
+    margin-top: 8rem;
     margin-bottom: 5rem;
 }
+
+.difuminado-superior,
+.difuminado-inferior {
+  position: absolute; /* Posición absoluta para que los elementos de difuminado floten sobre el contenido */
+  width: 100%;
+  pointer-events: none; /* Evita que los elementos de difuminado interfieran con los eventos del ratón */
+}
+
+.difuminado-superior {
+    margin-top: 8rem;
+    height: 1rem;
+  top: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte superior */
+}
+
+.difuminado-inferior {
+    margin-bottom: 5rem;
+    height: 1rem;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte inferior */
+}
+
 .articulos {
     display: flex;
     flex-direction: column;
@@ -164,7 +185,7 @@ footer {
     padding-right: 2rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    background: linear-gradient(to top, var(--fondo-violeta), #ffffff);
+    background: linear-gradient(to top, var(--fondo-violeta), rgba(255, 255, 255));
     
 }
 .social {
