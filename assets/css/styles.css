@@ -71,6 +71,9 @@ header {
     padding: 9px;
     background-color: var(--rosa);
 }
+select {
+    width: 11rem;
+}
 .sesion {
     display: none;
 }
@@ -104,16 +107,16 @@ main {
 
 .difuminado-superior,
 .difuminado-inferior {
-  position: absolute; /* Posición absoluta para que los elementos de difuminado floten sobre el contenido */
-  width: 100%;
-  pointer-events: none; /* Evita que los elementos de difuminado interfieran con los eventos del ratón */
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
 }
 
 .difuminado-superior {
     margin-top: 8rem;
     height: 1rem;
-  top: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte superior */
+    top: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte superior */
 }
 
 .difuminado-inferior {
@@ -177,7 +180,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.pie{
+.pie {
     display: flex;
     align-items: end;
     justify-content: space-between;
