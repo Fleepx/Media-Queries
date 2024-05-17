@@ -18,7 +18,11 @@
 header {
     display: grid;
     grid-area: header;
-    height: 14vh;
+    height: 8.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: linear-gradient(to bottom, var(--fondo-violeta), #ffffff);
 }
 .tienda {
@@ -93,13 +97,17 @@ menu {
 main {
     display: grid;    
     width: 100%;
-    height: 70vh;
     overflow-y: auto;
+    height: calc(100vh - 13.5rem);
+    margin-top: 8.5rem;
+    margin-bottom: 5rem;
 }
 .articulos {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .card {
     width: 20rem;
@@ -143,7 +151,10 @@ figcaption {
 footer {
     display: grid;
     grid-area: footer;
-    height: 8vh;
+    height: 5rem;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
 }
 .pie{
     display: flex;
