@@ -122,8 +122,8 @@ main {
 .difuminado-inferior {
     margin-bottom: 5rem;
     height: 1rem;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte inferior */
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte inferior */
 }
 
 .articulos {
@@ -132,6 +132,7 @@ main {
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    gap: 1rem;
 }
 .card {
     width: 20rem;
