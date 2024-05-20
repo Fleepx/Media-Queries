@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 /*GRID*/
 .grid-container  {
     display: grid;
@@ -46,6 +50,7 @@ header {
 .logo-tienda   {
     display: flex;
     align-items: center;
+    font-family: "Licorice", cursive;
     gap: 1rem;
 }
 #Soundwave {
@@ -70,7 +75,8 @@ header {
         }
 }
 #nombre  {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 #nombre2 {
     color: #000000;
@@ -80,7 +86,7 @@ header {
     background-color: var(--secundario);
 }
 
-#login, #register  {
+#login, #register, .fa-cart-shopping  {
     padding: 5px;
     cursor: pointer;
 }
@@ -112,11 +118,13 @@ select {
 /*MENU DE NAVEGACION*/
 menu {
     display: none;
+    font-family: "Roboto", sans-serif;
 }
 ul {
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
     gap: 4px;
     list-style: none;
 }
@@ -137,6 +145,7 @@ main {
     display: grid;    
     width: 100%;
     overflow-y: auto;
+    font-family: "Roboto", sans-serif;
     height: calc(100vh - 13rem);
     margin-top: 8rem;
     margin-bottom: 5rem;
@@ -182,7 +191,10 @@ main {
 }
 .card:hover {
     img {
-        transform: scale(1.1);
+        transform: scale(1.2);
+    }
+    .fa-share-from-square, .cart {
+        display: block;
     }
     box-shadow: 5px 5px 10px var(--fondo-principal);
     background-color: var(--fondo-card);
@@ -212,7 +224,24 @@ figcaption {
 .ID {
     font-size: 14px;
 }
+.compra {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+}
+.fa-share-from-square, .cart {
+    display: none;
+    cursor: pointer;
+    color: var(--fondo-principal);
+}
+.cart {
+    padding: 3px;
+    color: var(--fondo-principal);
+    background-color: var(--amarillo);
+}
 .precio {
+    font-size: 30px;
     text-align: end;
 }
 /*FOOTER*/
@@ -245,9 +274,7 @@ footer {
     gap: 3px;
 }
 @media (min-width: 576px) {
-    html {
-        overflow-x: hidden;
-    }
+    
     .grid-container  {
         overflow-x: hidden;
         display: grid;
@@ -277,6 +304,7 @@ footer {
     }
     .sesion {
         display: flex;
+        align-items: center;     
         gap: 1rem;
     }
     #filtro {
