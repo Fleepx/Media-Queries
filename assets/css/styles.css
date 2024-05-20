@@ -7,12 +7,17 @@
     display: grid;
     grid-template-areas:
     "header"
+    "menu"
     "main"
     "footer";
 }
+
 :root {
-    --fondo-violeta: #00009680;
-    --rosa: #ffc0d4;
+    --fondo-principal: #1F3A5F;
+    --secundario: #4d648d;
+    --terciario: #acc2ef;
+    --fondo-card: #f0ecec;
+    --amarillo: #FFEE00;
    }
 /*HEADER*/
 header {
@@ -22,7 +27,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to bottom, var(--fondo-violeta), rgba(255, 255, 255, 0.9));
+    background: linear-gradient(to bottom, var(--fondo-principal), rgba(255, 255, 255, 0.9));
 }
 .tienda {
     display: flex;
@@ -67,9 +72,25 @@ header {
 #nombre  {
     font-size: 1.4rem;
 }
+#nombre2 {
+    color: #000000;
+}
 .burguer {
     padding: 9px;
-    background-color: var(--rosa);
+    background-color: var(--secundario);
+}
+
+#login, #register  {
+    padding: 5px;
+    cursor: pointer;
+}
+#login {
+    background-color: var(--secundario);
+    color: var(--amarillo);
+}
+#register {
+    background-color: var(--terciario);
+    color: var(--secundario);
 }
 select {
     width: 11rem;
@@ -92,7 +113,23 @@ select {
 menu {
     display: none;
 }
-
+ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    gap: 4px;
+    list-style: none;
+}
+.list-item {
+    text-decoration: none; 
+    color: black;
+}
+li span {
+    color: gray;
+}
+li:hover {
+    color: var(--amarillo);
+}
 
 
 /*MAIN*/
@@ -105,8 +142,7 @@ main {
     margin-bottom: 5rem;
 }
 
-.difuminado-superior,
-.difuminado-inferior {
+.difuminado-superior, .difuminado-inferior {
     position: absolute;
     width: 100%;
     pointer-events: none;
@@ -130,7 +166,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
     gap: 1rem;
 }
@@ -148,7 +184,8 @@ main {
     img {
         transform: scale(1.1);
     }
-    box-shadow: 5px 5px 10px #00009680;
+    box-shadow: 5px 5px 10px var(--fondo-principal);
+    background-color: var(--fondo-card);
 }
 .img {
     height: 15rem;
@@ -172,6 +209,12 @@ figcaption {
     gap: 0.9rem;
     padding-top: 0.5rem;
 }
+.ID {
+    font-size: 14px;
+}
+.precio {
+    text-align: end;
+}
 /*FOOTER*/
 footer {
     display: grid;
@@ -189,7 +232,8 @@ footer {
     padding-right: 2rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    background: linear-gradient(to top, var(--fondo-violeta), rgba(255, 255, 255));
+    color: white;
+    background: linear-gradient(to top, var(--fondo-principal), rgba(255, 255, 255));
     
 }
 .social {
@@ -199,4 +243,76 @@ footer {
     height: 2.5rem;
     width: 3rem;
     gap: 3px;
+}
+@media (min-width: 576px) {
+    html {
+        overflow-x: hidden;
+    }
+    .grid-container  {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-areas:
+        "header header header header"
+        "menu main main main"
+        "footer footer footer footer";
+    }
+    
+    menu {
+        display: grid;
+        grid-area: menu;
+        width: 10rem ;
+        height: calc(100vh - 13rem);
+        margin-top: 8rem;
+        margin-bottom: 5rem;
+    }
+    main {
+        display: grid;
+        grid-area: main;
+    }
+    .articulos {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        
+    }
+    .sesion {
+        display: flex;
+        gap: 1rem;
+    }
+    #filtro {
+        display: none;
+    }
+    .burguer {
+        display: none;
+    }
+}
+@media (min-width: 960px) {
+    .grid-container  {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-areas:
+        "header header header header"
+        "menu main main main"
+        "footer footer footer footer";
+    }
+    .articulos {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+}
+@media (min-width: 1360px) {
+    .grid-container  {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-areas:
+        "header header header header"
+        "menu main main main"
+        "footer footer footer footer";
+    }
+    .articulos {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+    }
 }
