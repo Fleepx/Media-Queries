@@ -313,8 +313,8 @@ footer {
         display: grid;
         grid-area: menu;
         width: 10rem ;
-        height: calc(100vh - 13rem);
-        margin-top: 8rem;
+        height: calc(100vh - 16rem);
+        margin-top: 11rem;
         margin-bottom: 5rem;
     }
     main {
@@ -351,7 +351,7 @@ footer {
     .articulos {
         display: grid;
         grid-template-columns: auto auto;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
 @media (min-width: 1360px) {
@@ -366,6 +366,6 @@ footer {
     .articulos {
         display: grid;
         grid-template-columns: auto auto auto;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
