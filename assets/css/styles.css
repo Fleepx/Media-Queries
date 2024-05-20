@@ -50,7 +50,7 @@ header {
 .logo-tienda   {
     display: flex;
     align-items: center;
-    font-family: "Licorice", cursive;
+    font-family: "Trade Winds", system-ui;
     gap: 1rem;
 }
 #Soundwave {
@@ -74,12 +74,8 @@ header {
             transform: scale(1.2);
         }
 }
-#nombre  {
-    font-size: 2rem;
-    font-weight: 600;
-}
-#nombre2 {
-    color: #000000;
+.nombre-tienda{
+    font-size: 1rem;
 }
 .burguer {
     padding: 9px;
@@ -175,7 +171,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 11px;
     padding-bottom: 2rem;
     gap: 1rem;
 }
@@ -221,6 +217,9 @@ figcaption {
     gap: 0.9rem;
     padding-top: 0.5rem;
 }
+.descripcion {
+    font-weight: 400;
+}
 .ID {
     font-size: 14px;
 }
@@ -264,6 +263,10 @@ footer {
     color: white;
     background: linear-gradient(to top, var(--fondo-principal), rgba(255, 255, 255));
     
+}
+.datos {
+    font-family: "Roboto", sans-serif;    
+    font-size: 14px;
 }
 .social {
     display: flex;
