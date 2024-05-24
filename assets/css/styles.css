@@ -156,7 +156,7 @@ li:hover {
     background-position: center;
     
     background-size: 460% 80%;
-    transition: all 1s ease-out 0.3s;
+    transition: all 1s ease-out 0.2s;
 }
 .ofertas:hover {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../imgs/banner3.jpg);
@@ -216,16 +216,7 @@ main {
     padding: 2rem;
     transition: all 1s;
 }
-.card:hover {
-    img {
-        transform: scale(1.2);
-    }
-    .fa-share-from-square, .cart {
-        display: block;
-    }
-    box-shadow: 5px 5px 10px var(--fondo-principal);
-    background-color: var(--terciario);
-}
+
 .img {
     height: 15rem;
     width: 18rem;
@@ -237,7 +228,7 @@ main {
 }
 img  {
     width: 100%;
-    transition: transform 1s;
+    transition: transform 1s ease-out 0.2s;
 }
 
 figcaption {
@@ -262,18 +253,32 @@ figcaption {
     gap: 15px;
 }
 .fa-share-from-square, .cart {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     cursor: pointer;
     color: var(--fuente);
+    transition: opacity 0.5s ease 0.2s, visibility 0.5s ease 0.2s;
 }
 .cart {
     padding: 3px;
     color: var(--fuente);
     background-color: var(--recuadros);
 }
+
 .precio {
     font-size: 30px;
     text-align: end;
+}
+.card:hover {
+    img {
+        transform: scale(1.2);
+    }
+    .fa-share-from-square, .cart {
+        opacity: 1;
+        visibility: visible;
+    }
+    box-shadow: 5px 5px 10px var(--fondo-principal);
+    background-color: var(--terciario);
 }
 /*FOOTER*/
 footer {
