@@ -22,6 +22,10 @@ html {
     --terciario: #acc2ef;
     --fondo-card: #f0ecec;
     --amarillo: #FFEE00;
+    --recuadros: #374357;
+    --fuente: #FFFFFF;
+    --fuente-main: #000;
+    --difuminado: #ffffff00;
    }
 /*HEADER*/
 header {
@@ -31,14 +35,14 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to bottom, var(--fondo-principal), rgba(255, 255, 255, 0.9));
+    background-color: var(--fondo-principal);
 }
 .tienda {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 2vh;
 }
 .hero {
@@ -76,23 +80,23 @@ header {
 }
 .nombre-tienda{
     font-size: 1rem;
+    color:  var(--fuente) ;
 }
 .burguer {
+    color: var(--fondo-principal);
     padding: 9px;
-    background-color: var(--secundario);
+    background-color: var(--amarillo);
 }
-
-#login, #register, .fa-cart-shopping  {
-    padding: 5px;
-    cursor: pointer;
-}
-#login {
-    background-color: var(--secundario);
+.fa-cart-shopping {
     color: var(--amarillo);
 }
-#register {
-    background-color: var(--terciario);
-    color: var(--secundario);
+#login, #register, .fa-cart-shopping  {
+    cursor: pointer;
+    color: var(--fuente);
+}
+#login, #register {
+    padding: 5px;
+    background-color: var(--secundario);
 }
 select {
     width: 11rem;
@@ -103,6 +107,7 @@ select {
 
 /*MENU DE NAVEGACION */
 #filtro  {
+    color: var(--fuente);
     display: flex;
     gap: 1.3rem;
     justify-content: center;
@@ -114,60 +119,63 @@ select {
 /*MENU DE NAVEGACION*/
 menu {
     display: none;
-    font-family: "Roboto", sans-serif;
 }
 ul {
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    gap: 4px;
+    gap: 3px;
     list-style: none;
-    height: 15rem;
+    height: 13.9rem;
 }
 .list-item {
     text-decoration: none; 
-    color: black;
+    color: var(--fuente);
 }
 li span {
     color: gray;
+}
+li {
+    transition: all 1s;
 }
 li:hover {
     color: var(--amarillo);
 }
 .anuncio {
     height:30rem;
-    overflow:hidden;
+    overflow: hidden;
 }
 .ofertas {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--fuente);
     height: 30rem;
-    background-image: url(../imgs/banner.jpg);
-    background-size: cover;
+    background-image: url(../imgs/banner3.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: 1rem;
+    
+    background-size: 460% 80%;
+    transition: all 1s ease-out 0.3s;
 }
 .ofertas:hover {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../imgs/banner.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../imgs/banner3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: var(--amarillo);
+    background-size: 500% 100%;
 }
-
 /*MAIN*/
 main {
+    background-color: var(--fuente);
     display: grid;    
     width: 100%;
     overflow-y: auto;
     font-family: "Roboto", sans-serif;
-    height: calc(100vh - 16rem);
+    height: calc(100vh - 17rem);
     margin-top: 11rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .difuminado-superior, .difuminado-inferior {
@@ -180,14 +188,14 @@ main {
     margin-top: 11rem;
     height: 1rem;
     top: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte superior */
+    background: linear-gradient(to top, var(--difuminado, 0), var(--recuadros, 1));
 }
 
 .difuminado-inferior {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     height: 1rem;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Difuminado en la parte inferior */
+    background: linear-gradient(to bottom,var(--difuminado, 0), var(--recuadros, 1));
 }
 
 .articulos {
@@ -199,14 +207,14 @@ main {
     gap: 1rem;
 }
 .card {
-    width: 20rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 2rem;
     padding: 2rem;
-    transition: transform 1s;
+    transition: all 1s;
 }
 .card:hover {
     img {
@@ -216,11 +224,11 @@ main {
         display: block;
     }
     box-shadow: 5px 5px 10px var(--fondo-principal);
-    background-color: var(--fondo-card);
+    background-color: var(--terciario);
 }
 .img {
     height: 15rem;
-    width: 20rem;
+    width: 18rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,8 +243,9 @@ img  {
 figcaption {
     display: flex;
     flex-direction: column;
+    color: var(--fuente-main);
 
-    width: 20rem;
+    width: 18rem;
     gap: 0.9rem;
     padding-top: 0.5rem;
 }
@@ -255,12 +264,12 @@ figcaption {
 .fa-share-from-square, .cart {
     display: none;
     cursor: pointer;
-    color: var(--fondo-principal);
+    color: var(--fuente);
 }
 .cart {
     padding: 3px;
-    color: var(--fondo-principal);
-    background-color: var(--amarillo);
+    color: var(--fuente);
+    background-color: var(--recuadros);
 }
 .precio {
     font-size: 30px;
@@ -270,26 +279,25 @@ figcaption {
 footer {
     display: grid;
     grid-area: footer;
-    height: 5rem;
+    height: 6rem;
     position:fixed;
     bottom: 0;
     width: 100%;
 }
 .pie {
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
-    padding-left: 1rem;
-    padding-right: 2rem;
+    height: 6rem;
     padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: white;
-    background: linear-gradient(to top, var(--fondo-principal), rgba(255, 255, 255));
-    
+    background-color: var(--fondo-principal);
 }
 .datos {
     font-family: "Roboto", sans-serif;    
-    font-size: 14px;
+    font-size: 13px;
 }
 .social {
     display: flex;
@@ -299,28 +307,56 @@ footer {
     width: 3rem;
     gap: 3px;
 }
+.fa-brands {
+    cursor: pointer;
+}
+
+/*QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ*/
 @media (min-width: 576px) {
     
     .grid-container  {
         overflow-x: hidden;
         display: grid;
         grid-template-areas:
-        "header header header header"
-        "menu main main main"
-        "footer footer footer footer";
+        "header header"
+        "menu main"
+        "footer footer";
     }
-    
+    header {
+        height: 8rem;
+    }
     menu {
         display: grid;
         grid-area: menu;
-        width: 10rem ;
-        height: calc(100vh - 16rem);
-        margin-top: 11rem;
-        margin-bottom: 5rem;
+        width: 14rem;
+        height: calc(100vh - 15rem);
+        margin-top: 8rem;
+        margin-bottom: 7rem;
+        font-family: "Roboto", sans-serif;
+        background-color: var(--fondo-principal);
+        color: var(--fuente);
+    }
+    aside {
+        display: flex;
+        flex-direction: column;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
     }
     main {
         display: grid;
         grid-area: main;
+        width: calc(100vw - 12rem);
+        height: calc(100vh - 8rem);
+        margin-top: 8rem;
+    }
+    .difuminado-superior {
+        margin-top: 8rem;
+        height: 1rem;
+        width: calc(100vw - 12rem);
+    }
+    .difuminado-inferior {
+        display: none;
     }
     .articulos {
         display: grid;
@@ -339,16 +375,19 @@ footer {
     .burguer {
         display: none;
     }
+   footer {
+    height: 7rem;
+    width: 14rem;
+   }
+
+   .social {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+}
 }
 @media (min-width: 960px) {
-    .grid-container  {
-        overflow-x: hidden;
-        display: grid;
-        grid-template-areas:
-        "header header header header"
-        "menu main main main"
-        "footer footer footer footer";
-    }
     .articulos {
         display: grid;
         grid-template-columns: auto auto;
@@ -356,14 +395,6 @@ footer {
     }
 }
 @media (min-width: 1360px) {
-    .grid-container  {
-        overflow-x: hidden;
-        display: grid;
-        grid-template-areas:
-        "header header header header"
-        "menu main main main"
-        "footer footer footer footer";
-    }
     .articulos {
         display: grid;
         grid-template-columns: auto auto auto;
